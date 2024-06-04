@@ -211,11 +211,11 @@ public class Client {
                         Commande commande = commands.get(index);
 
                         System.err.println(String.format(
-                                "Commande %d:\n", commandes.indexOf(commande)));
+                                "Commande %d:", commandes.indexOf(commande)));
                         commande.affiche();
 
                         System.out.println(
-                                "Appuyer sur n'importe touche pour changer le statut de la commande en livrée.");
+                                "\nAppuyer sur n'importe touche pour changer le statut de la commande en livrée.");
                         System.out.println("Sauf sur R si vous souhaitez partir de ce menu.");
                         System.out.println("Sauf sur P si vous souhaitez passer cette commande.");
 
@@ -313,10 +313,14 @@ public class Client {
                     break;
 
                 default:
+                    System.out.println("Commande invalide...");
+                    gestion.wait(2000);
                     break;
-            }
+            } 
 
+            gestion.clear();
         }
+
     }
 
     private List<Commande> getCommandesValidee() {
