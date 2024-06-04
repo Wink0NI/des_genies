@@ -14,4 +14,8 @@ class CommandeLivree extends EtatCommande {
     public EtatCommande etatSuivant() {
         return this;
     }
+
+    public String getEtat() {
+        return "livree";
+    }
 }

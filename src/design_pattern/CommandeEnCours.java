@@ -14,4 +14,8 @@ public class CommandeEnCours extends EtatCommande {
     public EtatCommande etatSuivant() {
         return new CommandeValidee();
     }
+
+    public String getEtat() {
+        return "en cours";
+    }
 }

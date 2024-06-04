@@ -9,6 +9,10 @@ public class Commande {
         this.etatCommande = new CommandeEnCours();
     }
 
+    public String getEtat() {
+        return etatCommande.getEtat();
+    }
+
     public void ajouteProduit(Pizza pizza) {
         etatCommande.ajouteProduit(this, pizza);
     }
@@ -26,7 +30,6 @@ public class Commande {
     }
 
     public void affiche() {
-        System.out.println("Liste des produits :");
         for (Pizza pizza : pizzas) {
             System.out.println("- " + pizza.toString());
         }

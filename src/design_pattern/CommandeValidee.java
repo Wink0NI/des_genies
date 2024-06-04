@@ -14,4 +14,8 @@ public class CommandeValidee extends EtatCommande {
     public EtatCommande etatSuivant() {
         return new CommandeLivree();
     }
+
+    public String getEtat() {
+        return "validee";
+    }
 }
