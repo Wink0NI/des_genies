@@ -1,8 +1,10 @@
-public class Pate implements Ingredient {
+package main.design_pattern;
+
+public class Contenu implements Ingredient {
     private String name = "";
     private double prix;
 
-    public Pate(String name, double prix) {
+    public Contenu(String name, double prix) {
         this.name = name;
         this.prix = prix;
     }

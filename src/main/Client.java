@@ -1,7 +1,11 @@
+package main;
+
+import main.design_pattern.*;
+
 import java.util.Scanner;
 
-import process.SysGestion;
-import process.DBProcess;
+import main.process.DBProcess;
+import main.process.SysGestion;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -74,7 +78,7 @@ public class Client {
             }
 
             System.out.println("R - Enlever une pizza");
-            if (commande.pizzas.size() > 0) {
+            if (commande.getPizzas().size() > 0) {
                 System.out.println("F - Finaliser la commande");
             }
             System.out.println("A - Annuler la commande");
@@ -85,7 +89,7 @@ public class Client {
                 System.out.println("Au revoir...");
                 return;
             } else if (entree.equals("f")) {
-                if (commande.pizzas.size() == 0) {
+                if (commande.getPizzas().size() == 0) {
                     System.out.println("Erreur de commande: Une erreur est survenue.");
                 } else {
                     System.out.println(
@@ -111,7 +115,7 @@ public class Client {
                     System.out.println(
                             "----------------------------------------------------------------------------------------------------------------------");
                     System.out.println("Votre commande:");
-                    if (commande.pizzas.size() == 0) {
+                    if (commande.getPizzas().size() == 0) {
                         System.out.println("Vide...");
                         gestion.wait(2000);
                         break;
@@ -127,9 +131,9 @@ public class Client {
                             break;
                         } else {
                             try {
-                                Pizza pizza = commande.pizzas.get(Integer.parseInt(entree) - 1);
+                                Pizza pizza = commande.getPizzas().get(Integer.parseInt(entree) - 1);
 
-                                commande.pizzas.remove(pizza);
+                                commande.getPizzas().remove(pizza);
 
                                 System.out.println(String.format("%s supprimé avec succès.", pizza.toString()));
                                 gestion.wait(2000);

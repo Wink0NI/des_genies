@@ -1,3 +1,5 @@
+
+package main.design_pattern;
 class CommandeLivree extends EtatCommande {
     public void ajouteProduit(Commande commande, Pizza pizza) {
         return;

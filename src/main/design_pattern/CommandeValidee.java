@@ -1,6 +1,8 @@
-public class CommandeEnCours extends EtatCommande {
+
+package main.design_pattern;
+public class CommandeValidee extends EtatCommande {
     public void ajouteProduit(Commande commande, Pizza pizza) {
-        commande.pizzas.add(pizza);
+        return;
     }
 
     public void retireProduit(Commande commande, Pizza pizza) {
@@ -12,10 +14,10 @@ public class CommandeEnCours extends EtatCommande {
     }
 
     public EtatCommande etatSuivant() {
-        return new CommandeValidee();
+        return new CommandeLivree();
     }
 
     public String getEtat() {
-        return "en cours";
+        return "validee";
     }
 }

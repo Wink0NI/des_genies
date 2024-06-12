@@ -1,4 +1,6 @@
-abstract class PizzaBuilder {
+package main.design_pattern;
+
+public abstract class PizzaBuilder {
     protected Pizza pizza;
 
     public Pizza getPizza() {

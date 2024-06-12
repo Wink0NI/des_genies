@@ -1,3 +1,5 @@
+package main.design_pattern;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +44,10 @@ public class Commande {
                     String.format(
                             "%d - %s (%.2f$)", i + 1, pizza.toString(), pizza.getPrix()));
         }
+    }
+
+    public List<Pizza> getPizzas() {
+        return pizzas;
     }
 
 }

@@ -1,3 +1,5 @@
+package main.design_pattern;
+
 public class Serveur {
     private PizzaBuilder pizzaBuilder;
 

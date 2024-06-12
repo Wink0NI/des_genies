@@ -1,14 +1,16 @@
+package main.design_pattern;
+
 import java.util.List;
 import java.util.ArrayList;
 
-public class PizzaNorvegienneBuilder extends PizzaBuilder {
-    Pate pate = new Pate("cuite", 10.0);
-    Sauce sauce = new Sauce("Huile  d'olive", 10.0);
+public class PizzaHawaienneBuilder extends PizzaBuilder {
+    Pate pate = new Pate("moelleuse", 10.0);
+    Sauce sauce = new Sauce("douce", 5.0);
     List<Contenu> contenus = new ArrayList<Contenu>();
 
-    public PizzaNorvegienneBuilder() {
-        contenus.add(new Contenu("saumon", 10.0));
-        contenus.add(new Contenu("mozzarella", 10.0));
+    public PizzaHawaienneBuilder() {
+        contenus.add(new Contenu("jambon", 5.0));
+        contenus.add(new Contenu("ananas", 5.0));
     }
 
     public void buildPate() {
@@ -26,7 +28,7 @@ public class PizzaNorvegienneBuilder extends PizzaBuilder {
     }
 
     public String toString() {
-        return "Pizza Norvégienne";
+        return "Pizza Hawaienne";
     }
 
     public double getPrix() {
@@ -34,7 +36,7 @@ public class PizzaNorvegienneBuilder extends PizzaBuilder {
         for (Contenu ct : contenus) {
             contenu_somme += ct.getPrix();
         }
+    
         return pate.getPrix() + sauce.getPrix() + contenu_somme;
     }
 }
-
