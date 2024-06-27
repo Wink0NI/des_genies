@@ -3,14 +3,15 @@ package main.design_pattern;
 import java.util.List;
 import java.util.ArrayList;
 
-public class PizzaNorvegienneBuilder extends PizzaBuilder {
-    Pate pate = new Pate("cuite", 10.0);
-    Sauce sauce = new Sauce("Huile  d'olive", 10.0);
+public class PizzaSpecialBuilder extends PizzaBuilder {
+    Pate pate = new Pate("Croute epaisse", 15.0);
+    Sauce sauce = new Sauce("Creme", 7.0);
     List<Contenu> contenus = new ArrayList<Contenu>();
 
-    public PizzaNorvegienneBuilder() {
-        contenus.add(new Contenu("saumon", 30.0));
+    public PizzaSpecialBuilder() {
+        contenus.add(new Contenu("Noix de Jambon", 10.0));
         contenus.add(new Contenu("mozzarella", 13.0));
+        contenus.add(new Contenu("pomme de terre", 3.0));
     }
 
     public void buildPate() {
@@ -28,7 +29,7 @@ public class PizzaNorvegienneBuilder extends PizzaBuilder {
     }
 
     public String toString() {
-        return "Pizza Norvégienne";
+        return "Pizza Spécial";
     }
 
     public double getPrix() {

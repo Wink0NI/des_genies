@@ -25,6 +25,17 @@ public class Client {
     public Client() {
         pizzaBuilders.add(new PizzaHawaienneBuilder());
         pizzaBuilders.add(new PizzaNorvegienneBuilder());
+        pizzaBuilders.add(new PizzaForestiereBuilder());
+        pizzaBuilders.add(new PizzaSpecialBuilder());
+        pizzaBuilders.add(new Pizza4FromagesBuilder());
+        pizzaBuilders.add(new PizzaExploBoyBuilder());
+        pizzaBuilders.add(new Pizza0niteBuilder());
+        pizzaBuilders.add(new PizzaAy0liBuilder());
+        pizzaBuilders.add(new PizzaByByBuilder());
+        pizzaBuilders.add(new PizzaLexoBuilder());
+
+
+
     }
 
     public void interfaceEntree() {
