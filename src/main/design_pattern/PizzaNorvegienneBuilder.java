@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class PizzaNorvegienneBuilder extends PizzaBuilder {
     Pate pate = new Pate("cuite", 10.0);
-    Sauce sauce = new Sauce("Huile  d'olive", 10.0);
+    Sauce sauce = new Sauce("Huile d'olive", 10.0);
     List<Contenu> contenus = new ArrayList<Contenu>();
 
     public PizzaNorvegienneBuilder() {
