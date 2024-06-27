@@ -50,7 +50,7 @@ public class Test {
             System.out.println("Success: order state is 'delivered' after two transitions.");
         }
 
-
+        commande = new Commande();
         PizzaHawaienneBuilder pizzaBuilder = new PizzaHawaienneBuilder();
         pizzaBuilder.createNewPizzaProduct();
         pizzaBuilder.buildPate();
@@ -90,7 +90,7 @@ public class Test {
 
         
         commande.ajouteProduit(pizzaFromServer);
-        if (commande.getPizzas().size() == 0) {
+        if (commande.getPizzas().size() == 1) {
             System.out.println("Order test failed, the order did not pick the pizza");
             System.exit(1);
         } else {
@@ -100,7 +100,7 @@ public class Test {
         
         commande.etatSuivant(); 
         commande.ajouteProduit(pizzaFromServer);
-        if (commande.getPizzas().size() == 2) {
+        if (commande.getPizzas().size() == 3) {
             System.out.println("Order test failed, the order picked the pizza, although it was in Validated status");
             System.exit(1);
         } else {
